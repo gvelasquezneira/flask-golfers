@@ -1,0 +1,129 @@
+/* Set base font size and box-sizing */
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Body styling */
+body {
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+    background: #238989; /* Teal background */
+    margin: 0;
+}
+
+/* Container styling */
+#container {
+    margin: 2em auto;
+    max-width: 740px;
+    padding: 2rem 4rem;
+    background: #fff;
+    overflow: auto;
+}
+
+/* Headings */
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0.5rem 0;
+    text-align: center; /* Center the title */
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+/* Paragraphs and list items */
+p, li {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+/* Center paragraphs (for instructions and "Back to the list" link) */
+p {
+    text-align: center;
+}
+
+/* Unordered lists (for the list of golfers and stats) */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* List items on the index page (list of golfers) */
+ul li {
+    margin: 0.5rem 0;
+}
+
+ul li a {
+    display: block;
+    padding: 0.5rem;
+    background: #f0f0f0; /* Light gray background for each golfer link */
+    border: 1px solid #333;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* List items on the detail page (golfer stats) */
+#container ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+}
+
+#container ul li:last-child {
+    border-bottom: none;
+}
+
+/* Links */
+a {
+    color: #009; /* Dark blue */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0cc; /* Cyan on hover */
+    text-decoration: underline;
+}
+
+/* Style the "Back to the list" link as a button */
+p a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #f0f0f0;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 800px) {
+    body {
+        background: #fff; /* Remove teal background on smaller screens */
+    }
+
+    #container {
+        margin: 0;
+        width: 100%;
+        padding: 2rem;
+    }
+
+    h1 {
+        padding: 0 0 0.3rem 0;
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p, li {
+        font-size: 1.2rem;
+    }
+}

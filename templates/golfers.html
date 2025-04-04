@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ golf['Player'] }}</h1>
+
+<p>This is the {{ ord }} ranked golfer.</p>
+
+<h2>Stats</h2>
+<ul>
+    <li>Weeks at Number #1 Player: {{ golf['Weeks'] }}</li>
+    <li>Order: {{ golf['Order'] }}</li>
+    <li>Majors Won: {{ golf['Majors'] }}</li>
+</ul>
+
+<p><i>* The "Order" column shows the chronological sequence in which each player first achieved the number 1 ranking. </i></p>
+
+<p><a href="{{ url_for('index') }}">Back to the list</a></p>
+
+{% endblock %}

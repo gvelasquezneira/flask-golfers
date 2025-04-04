@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Golfers Ranking By Weeks As #1</h1>
+
+<p>Click any golfer’s name to see their stats.</p>
+
+<!-- pairs is a list of (Rank, Player) tuples sent by the route function -->
+<ol>
+    {% for pair in pairs %}
+        <li><a href="{{ url_for('detail', num=pair[0]) }}">{{ pair[1] }}</a></li>
+    {% endfor %}
+</ol>
+
+{% endblock %}
